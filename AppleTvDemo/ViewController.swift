@@ -45,11 +45,9 @@ class ViewController: UIViewController {
         testObject = ["foo" : "Hello World"]
         dataStore?.save(testObject, response: { savedTestObject in
             if let savedObject = savedTestObject as? [String : Any] {
-                DispatchQueue.main.async {
-                    self.objectSavedLabel.text = "Object has been saved in the real-time database"
-                    self.liveUpdateObjectPropertyLabel.text = "Live update object property"
-                    self.propertyLabel.text = savedObject["foo"] as? String
-                }
+                self.objectSavedLabel.text = "Object has been saved in the real-time database"
+                self.liveUpdateObjectPropertyLabel.text = "Live update object property"
+                self.propertyLabel.text = savedObject["foo"] as? String
                 self.testObject = savedObject
                 let eventHandler = self.dataStore?.rt
                 if let savedObjectId = savedObject["objectId"] as? String {
