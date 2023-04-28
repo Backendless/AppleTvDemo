@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B605DC1C91A8313584FAA7 /* Pods_AppleTvDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D8C17E6DB6EC7EFE43AF31 /* Pods_AppleTvDemo.framework */; };
 		5A28EA8720D9202D00EA3342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28EA8620D9202D00EA3342 /* AppDelegate.swift */; };
 		5A28EA8920D9202D00EA3342 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28EA8820D9202D00EA3342 /* ViewController.swift */; };
 		5A28EA8C20D9202D00EA3342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A28EA8A20D9202D00EA3342 /* Main.storyboard */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425116A398CBB52CB69CFC04 /* Pods-AppleTvDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTvDemo.release.xcconfig"; path = "Target Support Files/Pods-AppleTvDemo/Pods-AppleTvDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5A28EA8320D9202D00EA3342 /* AppleTvDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleTvDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A28EA8620D9202D00EA3342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A28EA8820D9202D00EA3342 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A28EA8B20D9202D00EA3342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A28EA8D20D9202F00EA3342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A28EA8F20D9202F00EA3342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D9EB10944F4F78A4AA19A36 /* Pods-AppleTvDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTvDemo.debug.xcconfig"; path = "Target Support Files/Pods-AppleTvDemo/Pods-AppleTvDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A1D8C17E6DB6EC7EFE43AF31 /* Pods_AppleTvDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTvDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B605DC1C91A8313584FAA7 /* Pods_AppleTvDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				5A28EA8520D9202D00EA3342 /* AppleTvDemo */,
 				5A28EA8420D9202D00EA3342 /* Products */,
+				E8D2BF8883EFC02F4FE6F92D /* Pods */,
+				D7BF3A0C7560D533FFEA727D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +68,23 @@
 			path = AppleTvDemo;
 			sourceTree = "<group>";
 		};
+		D7BF3A0C7560D533FFEA727D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8C17E6DB6EC7EFE43AF31 /* Pods_AppleTvDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D2BF8883EFC02F4FE6F92D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D9EB10944F4F78A4AA19A36 /* Pods-AppleTvDemo.debug.xcconfig */,
+				425116A398CBB52CB69CFC04 /* Pods-AppleTvDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A28EA9220D9202F00EA3342 /* Build configuration list for PBXNativeTarget "AppleTvDemo" */;
 			buildPhases = (
+				40DB9E96EA121784B5D5E7EE /* [CP] Check Pods Manifest.lock */,
 				5A28EA7F20D9202D00EA3342 /* Sources */,
 				5A28EA8020D9202D00EA3342 /* Frameworks */,
 				5A28EA8120D9202D00EA3342 /* Resources */,
+				5A46051193F2DA2C24B16479 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -87,12 +113,14 @@
 		5A28EA7B20D9202D00EA3342 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Backendless";
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = Backendless;
 				TargetAttributes = {
 					5A28EA8220D9202D00EA3342 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = "";
 					};
 				};
 			};
@@ -125,6 +153,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40DB9E96EA121784B5D5E7EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleTvDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A46051193F2DA2C24B16479 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppleTvDemo/Pods-AppleTvDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppleTvDemo/Pods-AppleTvDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppleTvDemo/Pods-AppleTvDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A28EA7F20D9202D00EA3342 /* Sources */ = {
@@ -264,6 +334,7 @@
 		};
 		5A28EA9320D9202F00EA3342 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D9EB10944F4F78A4AA19A36 /* Pods-AppleTvDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -276,14 +347,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.AppleTvDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/tvos/backendless/include/Backendless-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
 		5A28EA9420D9202F00EA3342 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425116A398CBB52CB69CFC04 /* Pods-AppleTvDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -296,9 +370,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.backendless.AppleTvDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/tvos/backendless/include/Backendless-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
